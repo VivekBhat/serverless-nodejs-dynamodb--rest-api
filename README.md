@@ -5,11 +5,37 @@ layout: Doc
 -->
 # Serverless REST API
 
-This example demonstrates how to setup a [RESTful Web Services](https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services) allowing you to create, list, get, update and delete Todos. DynamoDB is used to store the data. This is just an example and of course you could use any data storage as a backend.
+This example demonstrates how to setup a [RESTful Web Services](https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services) and perform the following operations on a dynamoDB database: 
+* Create
+* List
+* Get
+* Update
+* Delete
 
-## Structure
 
-This service has a separate directory for all the todo operations. For each operation exactly one file exists e.g. `todos/delete.js`. In each of these files there is exactly one function which is directly attached to `module.exports`.
+## Folder Structure
+
+```
+.
+├── README.md
+├── package-lock.json
+├── package.json
+├── serverless.yml
+└── todos
+    ├── create.js
+    ├── create_vivek.js
+    ├── delete.js
+    ├── get.js
+    ├── list.js
+    └── update.js
+
+```
+
+As can be seen from the folder structure. This service has a separate directory for all the todo operations. Exactly one file exists for each service.
+
+e.g. `todos/delete.js` to delete and so on. 
+
+In each of these files there is exactly one function which is directly attached to `module.exports`.
 
 The idea behind the `todos` directory is that in case you want to create a service containing multiple resources e.g. users, notes, comments you could do so in the same service. While this is certainly possible you might consider creating a separate service for each resource. It depends on the use-case and your preference.
 
