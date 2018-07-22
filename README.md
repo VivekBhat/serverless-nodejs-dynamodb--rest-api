@@ -141,7 +141,7 @@ This is can be done via settings in the `serverless.yml`.
 
 In case you expect a lot of traffic fluctuation we recommend to checkout this guide on how to auto scale DynamoDB [https://aws.amazon.com/blogs/aws/auto-scale-dynamodb-with-dynamic-dynamodb/](https://aws.amazon.com/blogs/aws/auto-scale-dynamodb-with-dynamic-dynamodb/)
 
-Credits: 
+### Credits: 
 * [AWS Lambda Documentation](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
 * [AWS Docs](https://github.com/awsdocs)
 * [AWS Doc SDK Examples](https://github.com/awsdocs/aws-doc-sdk-examples)
