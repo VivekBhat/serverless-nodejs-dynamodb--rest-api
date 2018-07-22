@@ -1,8 +1,4 @@
-<!--
-title: AWS Serverless REST API example in NodeJS
-description: This example demonstrates how to setup a RESTful Web Service allowing you to create, list, get, update and delete Todos. DynamoDB is used to store the data. 
-layout: Doc
--->
+
 # Serverless REST API
 
 This example demonstrates how to setup a [RESTful Web Services](https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services) and perform the following operations on a dynamoDB database: 
@@ -13,6 +9,14 @@ This example demonstrates how to setup a [RESTful Web Services](https://en.wikip
 * Delete
 
 
+## Architecture
+
+![architecture](serverless-nodejs-dynamodb-rest-api.png)
+
+## AWS Techs used:
+1. [AWS API Gateway](https://aws.amazon.com/api-gateway/)
+2. [AWS Lambda](https://aws.amazon.com/lambda/)
+3. [AWS DynamoDB](https://aws.amazon.com/dynamodb/)
 ## Folder Structure
 
 ```
@@ -142,7 +146,8 @@ This is can be done via settings in the `serverless.yml`.
 In case you expect a lot of traffic fluctuation we recommend to checkout this guide on how to auto scale DynamoDB [https://aws.amazon.com/blogs/aws/auto-scale-dynamodb-with-dynamic-dynamodb/](https://aws.amazon.com/blogs/aws/auto-scale-dynamodb-with-dynamic-dynamodb/)
 
 ### Credits: 
+* [AWS Documentation](https://aws.amazon.com/documentation/)
 * [AWS Lambda Documentation](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
-* [AWS Docs](https://github.com/awsdocs)
+* [AWS Documentation on Github](https://github.com/awsdocs)
 * [AWS Doc SDK Examples](https://github.com/awsdocs/aws-doc-sdk-examples)
 * [AWS SDK for JavaScript examples](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript)
