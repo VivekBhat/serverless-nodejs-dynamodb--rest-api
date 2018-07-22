@@ -27,7 +27,6 @@ This example demonstrates how to setup a [RESTful Web Services](https://en.wikip
 ├── serverless.yml
 └── todos
     ├── create.js
-    ├── create_vivek.js
     ├── delete.js
     ├── get.js
     ├── list.js
