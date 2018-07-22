@@ -37,14 +37,16 @@ e.g. `todos/delete.js` to delete and so on.
 
 In each of these files there is exactly one function which is directly attached to `module.exports`.
 
-The idea behind the `todos` directory is that in case you want to create a service containing multiple resources e.g. users, notes, comments you could do so in the same service. While this is certainly possible you might consider creating a separate service for each resource. It depends on the use-case and your preference.
+The idea behind the `todos` directory is that in case you want to create a service containing multiple resources e.g. users, notes, comments you could do so in the same service. 
 
 ## Use-cases
 
-- API for a Web Application
-- API for a Mobile Application
+- Serverless API for a Web Application
+- Serverless API for a Mobile Application
 
 ## Setup
+
+Install the required packages first by running the following command:
 
 ```bash
 npm install
@@ -56,36 +58,8 @@ In order to deploy the endpoint simply run
 
 ```bash
 serverless deploy
-```
-
-The expected result should be similar to:
-
-```bash
-Serverless: Packaging service…
-Serverless: Uploading CloudFormation file to S3…
-Serverless: Uploading service .zip file to S3…
-Serverless: Updating Stack…
-Serverless: Checking Stack update progress…
-Serverless: Stack update finished…
-
-Service Information
-service: serverless-rest-api-with-dynamodb
-stage: dev
-region: us-east-1
-api keys:
-  None
-endpoints:
-  POST - https://45wf34z5yf.execute-api.us-east-1.amazonaws.com/dev/todos
-  GET - https://45wf34z5yf.execute-api.us-east-1.amazonaws.com/dev/todos
-  GET - https://45wf34z5yf.execute-api.us-east-1.amazonaws.com/dev/todos/{id}
-  PUT - https://45wf34z5yf.execute-api.us-east-1.amazonaws.com/dev/todos/{id}
-  DELETE - https://45wf34z5yf.execute-api.us-east-1.amazonaws.com/dev/todos/{id}
-functions:
-  serverless-rest-api-with-dynamodb-dev-update: arn:aws:lambda:us-east-1:488110005556:function:serverless-rest-api-with-dynamodb-dev-update
-  serverless-rest-api-with-dynamodb-dev-get: arn:aws:lambda:us-east-1:488110005556:function:serverless-rest-api-with-dynamodb-dev-get
-  serverless-rest-api-with-dynamodb-dev-list: arn:aws:lambda:us-east-1:488110005556:function:serverless-rest-api-with-dynamodb-dev-list
-  serverless-rest-api-with-dynamodb-dev-create: arn:aws:lambda:us-east-1:488110005556:function:serverless-rest-api-with-dynamodb-dev-create
-  serverless-rest-api-with-dynamodb-dev-delete: arn:aws:lambda:us-east-1:488110005556:function:serverless-rest-api-with-dynamodb-dev-delete
+or 
+sls deploy -v
 ```
 
 ## Usage
@@ -166,4 +140,9 @@ This is can be done via settings in the `serverless.yml`.
 ```
 
 In case you expect a lot of traffic fluctuation we recommend to checkout this guide on how to auto scale DynamoDB [https://aws.amazon.com/blogs/aws/auto-scale-dynamodb-with-dynamic-dynamodb/](https://aws.amazon.com/blogs/aws/auto-scale-dynamodb-with-dynamic-dynamodb/)
-# serverless-nodejs-dynamodb--rest-api
+
+Credits: 
+* [AWS Lambda Documentation](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
+* [AWS Docs](https://github.com/awsdocs)
+* [AWS Doc SDK Examples](https://github.com/awsdocs/aws-doc-sdk-examples)
+* [AWS SDK for JavaScript examples](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/javascript)
