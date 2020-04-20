@@ -11,7 +11,7 @@ This example demonstrates how to setup a [RESTful Web Services](https://en.wikip
 
 ## Architecture
 
-![architecture](serverless-nodejs-dynamodb-rest-api.png)
+![architecture](https://raw.githubusercontent.com/VivekBhat/serverless-nodejs-dynamodb-rest-api/master/serverless-nodejs-dynamodb-rest-api.png)
 
 ## AWS Techs used:
 1. [AWS API Gateway](https://aws.amazon.com/api-gateway/)
